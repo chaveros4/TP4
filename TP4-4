@@ -1,0 +1,26 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int cantidad;
+    cout << "Ingrese la cantidad de vendedores: ";
+    cin >> cantidad;
+
+    vector<string> nombres(cantidad);
+    vector<int> ventas(cantidad);
+
+    for (int i = 0; i < cantidad; i++) {
+        cout << "Vendedor " << (i + 1) << " - Nombre: ";
+        cin >> nombres[i];
+        cout << "Cantidad de ventas: ";
+        cin >> ventas[i];
+    }
+
+    cout << "\nResumen de ventas:\n";
+    for (int i = 0; i < cantidad; i++) {
+        cout << nombres[i] << ": " << ventas[i] << " ventas" << endl;
+    }
+
+    return 0;
+}
